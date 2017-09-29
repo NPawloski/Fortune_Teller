@@ -14,6 +14,11 @@ namespace Fortune_Teller
             Console.WriteLine("What is your first name?");
             String firstName = Console.ReadLine();
             firstName = firstName.ToUpper();
+            if (firstName == "QUIT")
+            {
+                Console.WriteLine("Nobody likes a quitter...");
+                Environment.Exit(0);
+            }
 
             //testing the case changing
             //Console.WriteLine(firstName);
@@ -21,17 +26,39 @@ namespace Fortune_Teller
             Console.WriteLine("What is your last name?");
             String lastName = Console.ReadLine();
             lastName = lastName.ToUpper();
+            if (lastName == "QUIT")
+            {
+                Console.WriteLine("Nobody likes a quitter...");
+                Environment.Exit(0);
+            }
 
             Console.WriteLine("What is your age?");
-            int userAge = int.Parse(Console.ReadLine());
+            String ageInput = Console.ReadLine();
+            if (ageInput.ToUpper() == "QUIT")
+            {
+                Console.WriteLine("Nobody likes a quitter...");
+                Environment.Exit(0);
+            }
+            int userAge = int.Parse(ageInput);
 
-            Console.WriteLine("What month were you born in (format: 01-12");
-            int birthMonth = int.Parse(Console.ReadLine());
+            Console.WriteLine("What month were you born in (format: 01-12)");
+            String monthInput = Console.ReadLine();
+            if (monthInput.ToUpper() == "QUIT")
+            {
+                Console.WriteLine("Nobody likes a quitter...");
+                Environment.Exit(0);
+            }
+            int birthMonth = int.Parse(monthInput);
 
             Console.WriteLine("What is your favorive ROYGBIV color? \n (If you're unsure what ROYGBIV is, type Help)");
             String tempColorInput = Console.ReadLine();
             tempColorInput = tempColorInput.ToUpper();
             String favoriteColor;
+            if (tempColorInput == "QUIT")
+            {
+                Console.WriteLine("Nobody likes a quitter...");
+                Environment.Exit(0);
+            }
             if (tempColorInput == "HELP")
             {
                 Console.WriteLine("ROYGBIV is Red Blue Yellow Green Blue Indigo Violet");
@@ -43,7 +70,13 @@ namespace Fortune_Teller
             }
 
             Console.WriteLine("How many siblings do you have?");
-            int numSiblings = int.Parse(Console.ReadLine());
+            String siblingsInput = Console.ReadLine();
+            if (siblingsInput.ToUpper() == "QUIT")
+            {
+                Console.WriteLine("Nobody likes a quitter...");
+                Environment.Exit(0);
+            }
+            int numSiblings = int.Parse(siblingsInput);
 
             //checking inputs
             //Console.WriteLine(firstName + " " + lastName + " " + userAge + " " + birthMonth + " " + favoriteColor + " " + numSiblings);
@@ -153,6 +186,8 @@ namespace Fortune_Teller
                 firstName, lastName, yearsTillRetire, moneySaved, vacationHome, modeOfTransport);
 
 
+
         }
+
     }
 }
