@@ -146,7 +146,11 @@ namespace Fortune_Teller
             }
 
             //testing part 2 functions
-            Console.WriteLine(yearsTillRetire + " " + vacationHome + " " + modeOfTransport + " " + moneySaved);
+            //Console.WriteLine(yearsTillRetire + " " + vacationHome + " " + modeOfTransport + " " + moneySaved);
+
+
+            Console.WriteLine("{0} {1} will retire in {2} years with ${3} in the bank, a vaction home in {4}, and a {5}.",
+                firstName, lastName, yearsTillRetire, moneySaved, vacationHome, modeOfTransport);
 
 
         }
