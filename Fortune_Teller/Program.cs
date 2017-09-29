@@ -46,10 +46,107 @@ namespace Fortune_Teller
             int numSiblings = int.Parse(Console.ReadLine());
 
             //checking inputs
-            Console.WriteLine(firstName + " " + lastName + " " + userAge + " " + birthMonth + " " + favoriteColor + " " + numSiblings);
+            //Console.WriteLine(firstName + " " + lastName + " " + userAge + " " + birthMonth + " " + favoriteColor + " " + numSiblings);
 
 
+            int yearsTillRetire;
+            if (userAge % 2 == 0)
+            {
+                yearsTillRetire = 32;
+            }
+            else
+            {
+                yearsTillRetire = 40;
+            }
 
+            String vacationHome;
+            if (numSiblings >= 0)
+            {
+                switch (numSiblings)
+                {
+                    case 0:
+                        vacationHome = "Cologn Germany";
+                        break;
+
+                    case 1:
+                        vacationHome = "Key West Florida";
+                        break;
+
+                    case 2:
+                        vacationHome = "South carolina";
+                        break;
+
+                    case 3:
+                        vacationHome = "Atlanta Georgia";
+                        break;
+
+                    default:
+                        vacationHome = "Cleveland Ohio";
+                        break;
+
+                }
+            }
+            else
+            {
+                vacationHome = "Detroit Michigan";
+            }
+
+            String modeOfTransport;
+            switch (favoriteColor)
+            {
+                case "RED":
+                    modeOfTransport = "Zaku II HMT";
+                    break;
+
+                case "ORANGE":
+                    modeOfTransport = "Cevy Camaro";
+                    break;
+
+                case "YELLOW":
+                    modeOfTransport = "Ford Mustang";
+                    break;
+
+                case "GREEN":
+                    modeOfTransport = "Toyota Prius";
+                    break;
+
+                case "BLUE":
+                    modeOfTransport = "Subaru Impretza WRX STI";
+                    break;
+
+                case "INDIGO":
+                    modeOfTransport = "Toyota GT86";
+                    break;
+
+                case "VIOLET":
+                    modeOfTransport = "Dodge Challanger";
+                    break;
+
+                default:
+                    modeOfTransport = "SmartCar";
+                    break;
+            }
+
+            double moneySaved;
+            if (birthMonth >= 1 && birthMonth <= 4)
+            {
+                moneySaved = 44000;
+            }
+            else if (birthMonth >= 5 && birthMonth <= 8)
+            {
+                moneySaved = 63000;
+            }
+            else if (birthMonth >= 9 && birthMonth <= 12)
+            {
+                moneySaved = 97000;
+            }
+            else
+            {
+                moneySaved = 0;
+            }
+
+            //testing part 2 functions
+            Console.WriteLine(yearsTillRetire + " " + vacationHome + " " + modeOfTransport + " " + moneySaved);
 
 
         }
