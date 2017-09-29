@@ -28,15 +28,29 @@ namespace Fortune_Teller
             Console.WriteLine("What month were you born in (format: 01-12");
             int birthMonth = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("What is your favorive ROYGBIV color? \n (type Help if you're unsure what ROYGBIV is.");
-            String favoriteColor = Console.ReadLine();
-            favoriteColor = favoriteColor.ToUpper();
+            Console.WriteLine("What is your favorive ROYGBIV color? \n (If you're unsure what ROYGBIV is, type Help)");
+            String tempColorInput = Console.ReadLine();
+            tempColorInput = tempColorInput.ToUpper();
+            String favoriteColor;
+            if (tempColorInput == "HELP")
+            {
+                Console.WriteLine("ROYGBIV is Red Blue Yellow Green Blue Indigo Violet");
+                favoriteColor = Console.ReadLine();
+            }
+            else
+            {
+                favoriteColor = tempColorInput.ToUpper();
+            }
 
             Console.WriteLine("How many siblings do you have?");
             int numSiblings = int.Parse(Console.ReadLine());
 
             //checking inputs
             Console.WriteLine(firstName + " " + lastName + " " + userAge + " " + birthMonth + " " + favoriteColor + " " + numSiblings);
+
+
+
+
 
         }
     }
